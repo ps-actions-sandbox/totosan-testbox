@@ -10,6 +10,8 @@ updates:
     schedule:
       interval: "daily"
     assignees: [totosan]
-    commit-message: "pip"
-    labels: [triage-required]
+    commit-message:
+      prefix: "pip"
+    labels: 
+      - "triage-required"
     
