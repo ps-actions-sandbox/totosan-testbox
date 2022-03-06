@@ -2,4 +2,4 @@ name: "My CodeQL config"
 
 queries:
     - uses: security-and-quality
-    - uses: ./custom-queries/code-scanning.qls
+    - uses: .github/codeql/custom-queries/code-scanning.qls
