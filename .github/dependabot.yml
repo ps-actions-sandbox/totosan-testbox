@@ -9,3 +9,7 @@ updates:
     directory: "/authn-service/" # Location of package manifests
     schedule:
       interval: "daily"
+    assignees: [totosan]
+    commit-message: "pip"
+    labels: [triage-required]
+    
