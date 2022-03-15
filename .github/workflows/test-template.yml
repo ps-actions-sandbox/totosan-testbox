@@ -1,0 +1,21 @@
+name: Test workflow template
+
+on:
+  push:
+    branches: [ main ]
+  
+  workflow_dispatch:  
+    inputs:
+      username:
+        description: 'A username passed from the caller workflow'
+        default: 'Mr T'
+        required: false
+        type: string
+        
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a one-line script
+        run: echo "Hello this is ${{ inputs.usernam }}"
