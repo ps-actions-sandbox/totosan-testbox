@@ -12,6 +12,6 @@ jobs:
           echo "I've been dispatched"
       - name: Output command and arguments
         run: |
-          echo ${{ github.event.client_payload.slash_command.command }}
-          echo ${{ github.event.client_payload.slash_command.args.all }}
-          echo "Those are the arguments : ${{ github.event.client_payload.slash_command.args.unnamed.all }}"
+          echo "Command: ${{ github.event.client_payload.slash_command.command }}"
+          echo "All named Args: ${{ github.event.client_payload.slash_command.args.all }}"
+          echo "All unnamed Args: ${{ github.event.client_payload.slash_command.args.unnamed.all }}"
