@@ -1,0 +1,12 @@
+name: Command was dispatched
+on:
+  repository_dispatch:
+    types: [integration-test-command]
+
+jobs:
+  commandDispatched:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Want something to say
+        run: |
+          echo "I've been dispatched"
