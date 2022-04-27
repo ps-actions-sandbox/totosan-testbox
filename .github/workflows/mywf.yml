@@ -38,5 +38,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo "This is an event from '${{ toJSON(github.event_name) }}'"
+          echo "This is an event from '${{ github.event_name }}'"
+          echo 'Hello, The log level is now ${{ toJSON(inputs.logLevel) }}'
 
