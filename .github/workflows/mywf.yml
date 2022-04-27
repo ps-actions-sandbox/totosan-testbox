@@ -33,7 +33,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         if: ${{ contains( inputs.logLevel, 'info') }}
-        run: echo Hello, The log level is now: ${{ inputs.logLevel }}!
+        run: echo "Hello, The log level is now: ${{ inputs.logLevel }}!"
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
