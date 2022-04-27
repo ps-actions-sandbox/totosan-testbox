@@ -32,8 +32,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        if: ${{ inputs.logLevel == 'info' }}
-        run: echo 'Hello, The log level is now ${{ inputs.logLevel }}'
+        if: ${{ contains(toJSON(github.event.inputs.logLevel), 'info') }}
+        run: echo 'Hello, The log level is now ${{ github.event.inputs.logLevel }}'
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
