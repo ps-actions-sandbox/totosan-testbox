@@ -33,7 +33,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./actions
         with:
-          image: Bild000.jpg
+          image: ./Bild000.jpg
       # Runs a single command using the runners shell
       - name: Run a one-line script
         if: ${{ contains(toJSON(github.event.inputs.logLevel), 'debug') }}
