@@ -16,6 +16,7 @@ jobs:
         run: |
             mkdir myfolder
             ls -alH
+  
   deploy-DEV:
     needs: build
     runs-on: ubuntu-latest
@@ -31,3 +32,7 @@ jobs:
     steps:
       - name: this is running on another machine
         run: whoami
+      - name: secret test
+        run: |
+          echo "Here is the secret, that you cannot see 😂"
+          echo ${{ secrets.PROD_ENV_SECRET }}
