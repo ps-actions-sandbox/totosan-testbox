@@ -1,0 +1,24 @@
+name: staging-demo
+
+on:
+  push:
+    branches: [ main ]
+    
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: "This is the agents folder"
+        run: |
+            mkdir myfolder
+            ls -alH
+  deploy:
+    runs-on: ubuntu-latest
+    environment: DEV
+    steps:
+      - name: this is running on another machine
+        run: whoami
