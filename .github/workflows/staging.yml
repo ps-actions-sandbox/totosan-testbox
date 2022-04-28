@@ -16,9 +16,18 @@ jobs:
         run: |
             mkdir myfolder
             ls -alH
-  deploy:
+  deploy-DEV:
+    needs: build
     runs-on: ubuntu-latest
     environment: DEV
+    steps:
+      - name: this is running on another machine
+        run: whoami
+
+  deploy-PRED:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: PROD
     steps:
       - name: this is running on another machine
         run: whoami
