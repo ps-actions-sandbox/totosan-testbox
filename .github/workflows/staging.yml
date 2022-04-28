@@ -18,12 +18,16 @@ jobs:
             ls -alH
   
   deploy-DEV:
+    strategy:
+      matrix:
+        stage: [DEV, PROD]
+        
     needs: build
     runs-on: ubuntu-latest
-    environment: DEV
+    environment: ${{ matrix.stage }}
     steps:
       - name: this is running on another machine
-        run: whoami
+        run: echo I am on STAGE: ${{ matrix.stage }}
 
   deploy-PRED:
     needs: build
