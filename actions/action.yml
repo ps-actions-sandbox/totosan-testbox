@@ -1,0 +1,14 @@
+# action.yml
+name: 'Hello World'
+description: 'makes ascii out of image'
+inputs:
+  image:  # id of input
+    description: 'image file'
+    required: true
+    default: ''
+
+runs:
+  using: 'docker'
+  image: 'jamesbrink/image-to-ascii'
+  args:
+    - ${{ inputs.image }}
