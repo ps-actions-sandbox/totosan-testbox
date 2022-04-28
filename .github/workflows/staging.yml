@@ -27,7 +27,7 @@ jobs:
     environment: ${{ matrix.stage }}
     steps:
       - name: this is running on another machine
-        run: echo I am on STAGE: ${{ matrix.stage }}
+        run: echo I am on STAGE:${{ matrix.stage }}
 
   deploy-PRED:
     needs: build
