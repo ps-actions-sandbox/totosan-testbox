@@ -20,7 +20,7 @@ jobs:
   deploy-DEV:
     strategy:
       matrix:
-        stage: [DEV, PROD]
+        stage: [DEV, TEST, STAGING]
         
     needs: build
     runs-on: ubuntu-latest
