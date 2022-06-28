@@ -30,7 +30,7 @@ jobs:
         run: echo I am on STAGE:${{ matrix.stage }}
 
   deploy-PRED:
-    needs: build
+    needs: deploy-DEV
     runs-on: ubuntu-latest
     environment: PROD
     steps:
