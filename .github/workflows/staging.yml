@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: GPU
 
     steps:
       - uses: actions/checkout@v3
